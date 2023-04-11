@@ -8,9 +8,9 @@ pipeline {
     stages {
         stage ('GitCheckout') {
             steps {
-                gitCheckout (
-                    branch: 'main'
-                    url: 'https://github.com/Harikrushn96/jenkinsfile_with_variable.git'
+            gitCheckout (
+                branch: "main"
+                url: "https://github.com/Harikrushn96/jenkinsfile_with_variable.git"
                 )
             }
         }
