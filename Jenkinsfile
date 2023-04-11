@@ -10,7 +10,7 @@ pipeline {
     //  choice (name: "action", choices: "create\ndestroy" description: "choose create or destroy")
         string (name: "imageName", description: "name for the image", defaultValue: "harikrushn96")
         string (name: "imageTag", description: "versions of the image", defaultValue: "v1")
-        string (name: "Appname", description: "name for the image", defaultValue: "java_app")
+        string (name: "Appname", description: "name for the image", defaultValue: "jenkins_variable")
     }
 
     stages {
