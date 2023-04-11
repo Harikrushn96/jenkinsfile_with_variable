@@ -1,4 +1,4 @@
-
+@Library('my_jenkins_shared_lib') _
 pipeline {
     agent any
     tools {
@@ -8,7 +8,10 @@ pipeline {
     stages {
         stage ('GitCheckout') {
             steps {
-               git branch: 'main', url: 'https://github.com/Harikrushn96/jenkinsfile_with_variable.git'
+                gitCheckout (
+                    branch: 'main'
+                    url: 'https://github.com/Harikrushn96/jenkinsfile_with_variable.git'
+                )
             }
         }
         stage ('maven Build') {
