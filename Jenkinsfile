@@ -46,6 +46,12 @@ pipeline {
                 dockerBuild("${params.imageName}","${params.Appname}","${params.imageTag}")
             }
         }
+
+        stage('Pushing img to Dockerhub'){
+            steps {
+                dockerPush("${params.imageName}","${params.Appname}","${params.imageTag}")
+            }
+        }
     }
 
 }
