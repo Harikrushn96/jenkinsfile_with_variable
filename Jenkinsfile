@@ -32,6 +32,12 @@ pipeline {
                 mvnBuild()
             }
         }
+
+        stage ('Build Docker images'){
+            steps {
+                
+            }
+        }
     }
 
 }
